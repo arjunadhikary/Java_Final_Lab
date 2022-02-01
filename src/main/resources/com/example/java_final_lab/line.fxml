@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_final_lab.LineController">
+   <children>
+       <AnchorPane prefHeight="430.0" prefWidth="226.0" style="-fx-background-color: black;">
+           <children>
+               <VBox layoutY="223.0" prefHeight="177.0" prefWidth="226.0">
+                   <children>
+                  <Button fx:id="home" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: black;" text="   Home      " textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../assets/1x/baseline_stacked_line_chart_white_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                       <Button fx:id="lineChartButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="34.0" prefWidth="226.0" style="-fx-background-color: black;" text="   Line Chart" textFill="WHITE">
+                           <font>
+                               <Font size="16.0" />
+                           </font>
+                           <graphic>
+                               <ImageView fitHeight="29.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../../../assets/1x/baseline_stacked_line_chart_white_24dp.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                       <Button fx:id="barChartButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="42.0" prefWidth="226.0" style="-fx-background-color: black;" text="   Bar Chart" textFill="WHITE">
+                           <font>
+                               <Font size="16.0" />
+                           </font>
+                           <graphic>
+                               <ImageView fitHeight="32.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../../../assets/1x/baseline_bar_chart_white_24dp.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                       <Button fx:id="pieChartButton" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="39.0" prefWidth="226.0" style="-fx-background-color: black;" text="    Pie Chart" textFill="WHITE">
+                           <font>
+                               <Font size="16.0" />
+                           </font>
+                           <graphic>
+                               <ImageView fitHeight="27.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../../../assets/1x/baseline_pie_chart_white_24dp.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                       <Button fx:id="logout" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="39.0" prefWidth="226.0" style="-fx-background-color: black;" text="   Logout  " textFill="#fdfdfd">
+                           <font>
+                               <Font size="16.0" />
+                           </font>
+                           <graphic>
+                               <ImageView fitHeight="32.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                   <image>
+                                       <Image url="@../../../assets/1x/baseline_logout_white_24dp.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                   </children>
+               </VBox>
+               <ImageView fitHeight="163.0" fitWidth="158.0" layoutX="35.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@../../../assets/logos.png" />
+                   </image>
+               </ImageView>
+
+           </children>
+       </AnchorPane>
+      <LineChart fx:id="lineChart" layoutX="226.0" layoutY="2.0" prefHeight="428.0" prefWidth="550.0" title="Books Growth">
+        <xAxis>
+          <CategoryAxis label="Type" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="No of books" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
